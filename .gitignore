@@ -1,6 +1,6 @@
-dev/
-dist/
 .idea/
 node_modules/
 .vscode/
 yarn-error.log
+
+/shareon.*

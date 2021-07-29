@@ -10,48 +10,18 @@ on:
       - main
 
 jobs:
-  lint:
-    name: Lint package
+  test:
+    name: Lint and test package
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
       - name: Install dependencies
         run: yarn
-      - name: Lint
-        run: yarn lint
-
-  build-docs:
-    name: Build and test package and deploy docs
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Install dependencies
-        run: yarn
-      - name: Test package
+      - name: Test
         run: yarn test
-
-      - name: Copy built files to docs
-        run: cp ./dist/shareon.min.* ./docs
-        if: ${{ github.ref == 'refs/heads/main' }}
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          keep_history: true
-          build_dir: docs
-          fqdn: shareon.js.org
-          jekyll: false
-        if: ${{ github.ref == 'refs/heads/main' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

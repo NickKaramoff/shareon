@@ -1,8 +1,8 @@
 {
   "name": "shareon",
-  "version": "1.6.2",
+  "version": "2.0.0-0",
   "description": "Lightweight, stylish and ethical share buttons for popular social networks",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "homepage": "https://shareon.js.org",
   "keywords": [
     "share buttons",
@@ -21,72 +21,60 @@
     "email": "nick@karamoff.dev",
     "url": "https://karamoff.dev"
   },
-  "main": "./dist/shareon.cjs",
-  "module": "./dist/shareon.mjs",
-  "unpkg": "./dist/shareon.min.js",
+  "type": "module",
+  "main": "shareon.legacy.js",
+  "module": "shareon.js",
   "exports": {
-    "require": "./dist/shareon.cjs",
-    "import": "./dist/shareon.mjs"
+    "import": "./shareon.js"
   },
+  "types": "shareon.d.ts",
   "files": [
-    "dist"
+    "shareon.css",
+    "shareon.css.map",
+    "shareon.js",
+    "shareon.js.map",
+    "shareon.legacy.js",
+    "shareon.legacy.js.map",
+    "shareon.d.ts"
   ],
   "scripts": {
-    "build": "rollup --config",
-    "build:dev": "cross-env NODE_ENV=development rollup --config",
-    "dev": "cross-env NODE_ENV=development rollup --config --watch",
-    "lint": "eslint src/*.js",
+    "build-js": "esbuild lib/shareon.js --format=esm --minify --outfile=shareon.js --sourcemap --target=es6",
+    "build-legacy-js": "esbuild lib/shareon.js --format=iife --minify --outfile=shareon.legacy.js --sourcemap --target=es6 --global-name=shareon",
+    "build-css": "postcss lib/shareon.css --map --output shareon.css",
+    "build-types": "tsc lib/shareon.js --declaration --allowJs --emitDeclarationOnly --outDir .",
+    "build": "run-p build-*",
+    "lint": "eslint lib",
     "release": "np",
     "size": "size-limit",
     "test": "yarn lint && yarn build && yarn size",
     "postversion": "yarn build"
   },
   "devDependencies": {
-    "@nickkaramoff/rollup-plugin-consts": "^1.1.0",
-    "@rollup/plugin-buble": "^0.21.3",
-    "@rollup/plugin-strip": "^2.0.1",
     "@size-limit/preset-small-lib": "^5.0.1",
     "autoprefixer": "^10.2.6",
-    "browserslist": "^4.16.6",
-    "cross-env": "^7.0.3",
-    "cssnano": "^5.0.6",
+    "cssnano": "^5.0.7",
+    "esbuild": "^0.12.15",
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "np": "^7.2.0",
-    "postcss": "^8.2.4",
-    "postcss-banner": "^4.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
     "postcss-calc": "^8.0.0",
+    "postcss-cli": "^8.3.1",
     "postcss-css-variables": "^0.18.0",
-    "postcss-mixins": "^8.1.0",
-    "rollup": "^2.36.2",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "size-limit": "^5.0.1"
+    "size-limit": "^5.0.1",
+    "typescript": "^4.3.5"
   },
   "size-limit": [
     {
       "limit": "7 KB",
-      "path": "./dist/shareon.min.css",
+      "path": "shareon.css",
       "webpack": false
     },
     {
       "limit": "1 KB",
-      "path": "./dist/shareon.min.js",
-      "webpack": false
-    },
-    {
-      "limit": "1 KB",
-      "path": [
-        "./dist/shareon.cjs"
-      ]
-    },
-    {
-      "limit": "1 KB",
-      "path": [
-        "./dist/shareon.mjs"
-      ]
+      "path": "shareon.js"
     }
-  ],
-  "dependencies": {}
+  ]
 }

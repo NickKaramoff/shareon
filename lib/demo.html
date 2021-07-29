@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shareon Demo Page</title>
+
+  <link rel="stylesheet" href="./shareon.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1/modern-normalize.min.css">
+
+	<style>
+		body {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.shareon.specimen {
+			font-weight: 600;
+		}
+	</style>
+</head>
+
+<body>
+  <main>
+    <h1>Shareon Demo Page</h1>
+    <section>
+      <h2><code>&lt;a&gt;</code></h2>
+      <div class="shareon">
+        <a class="facebook"></a>
+        <a class="linkedin"></a>
+        <a class="mastodon"></a>
+        <a class="messenger" data-fb-app-id="3619024578167617"></a>
+        <a class="odnoklassniki"></a>
+        <a class="pinterest"></a>
+        <a class="pocket"></a>
+        <a class="reddit"></a>
+        <a class="telegram"></a>
+        <a class="twitter"></a>
+        <a class="viber"></a>
+        <a class="vkontakte"></a>
+        <a class="whatsapp"></a>
+      </div>
+    </section>
+    <section>
+      <h2><code>&lt;button&gt;</code></h2>
+      <div class="shareon">
+        <button class="facebook"></button>
+        <button class="linkedin"></button>
+        <button class="mastodon"></button>
+        <button class="messenger" data-fb-app-id="3619024578167617"></button>
+        <button class="odnoklassniki"></button>
+        <button class="pinterest"></button>
+        <button class="pocket"></button>
+        <button class="reddit"></button>
+        <button class="telegram"></button>
+        <button class="twitter"></button>
+        <button class="viber"></button>
+        <button class="vkontakte"></button>
+        <button class="whatsapp"></button>
+      </div>
+    </section>
+    <section>
+      <h2><code>&lt;a&gt;</code> with custom params</h2>
+      <div class="shareon" data-title="shareon demo page test" data-url="https://demo.shareon.js.org" data-text="hey check this out">
+        <a class="facebook"></a>
+        <a class="linkedin"></a>
+        <a class="mastodon" data-via="@NickKaramoff@fosstodon.org"></a>
+        <a class="messenger" data-fb-app-id="3619024578167617"></a>
+        <a class="odnoklassniki"></a>
+        <a class="pinterest"></a>
+        <a class="pocket"></a>
+        <a class="reddit"></a>
+        <a class="telegram"></a>
+        <a class="twitter" data-via="nickkaramoff"></a>
+        <a class="viber"></a>
+        <a class="vkontakte"></a>
+        <a class="whatsapp"></a>
+      </div>
+    </section>
+    <section>
+      <h2>Specimen</h2>
+      <div class="shareon specimen">
+        <a class="facebook">Share</a>
+        <a class="linkedin"></a>
+        <a class="mastodon">Toot</a>
+        <a class="messenger" data-fb-app-id="3619024578167617"></a>
+        <a class="odnoklassniki"></a>
+        <a class="pinterest">Pin</a>
+        <br />
+        <a class="pocket"></a>
+        <a class="reddit"></a>
+        <a class="telegram"></a>
+        <a class="twitter"></a>
+        <a class="viber"></a>
+        <a class="vkontakte">Отправить</a>
+        <a class="whatsapp"></a>
+      </div>
+    </section>
+  </main>
+
+	<script type="module" src="./shareon.js"></script>
+</body>
+
+</html>

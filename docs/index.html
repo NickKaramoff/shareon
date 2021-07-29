@@ -1,292 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lightweight, stylish and ethical share buttons for popular social networks">
-    <meta name="keywords" content="share buttons, sharing, social networks, share via, share on">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Lightweight, stylish and ethical share buttons for popular social networks">
+	<meta name="keywords" content="share buttons, sharing, social networks, share via, share on">
 	<meta name="author" content="Nikita Karamov">
 
-    <title>shareon – Lightweight, stylish and ethical share buttons</title>
+	<title>shareon – Lightweight, stylish and ethical share buttons</title>
 
-    <meta property="og:title" content="shareon">
-    <meta property="og:url" content="https://shareon.js.org">
-    <meta property="og:image" content="https://raw.githubusercontent.com/NickKaramoff/shareon/main/assets/banner.png">
-    <meta property="og:description" content="Lightweight, stylish and ethical share buttons for popular social networks">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@NickKaramoff">
+	<meta property="og:title" content="shareon">
+	<meta property="og:url" content="https://shareon.js.org">
+	<meta property="og:image" content="https://raw.githubusercontent.com/NickKaramoff/shareon/main/assets/banner.png">
+	<meta property="og:description" content="Lightweight, stylish and ethical share buttons for popular social networks">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@NickKaramoff">
 
-    <link rel="stylesheet" href="https://igoradamenko.github.io/awsm.css/css/awsm.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1/modern-normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simpledotcss@1/simple.min.css">
+	<link rel="stylesheet" href="https://cdn.skypack.dev/shareon@2.0.0-0/shareon.css
+	">
+	<script type="module" src="https://cdn.skypack.dev/shareon@2.0.0-0?min"></script>
 
-    <style>
-        .shareon > a:hover {
-            color: #fff;
-        }
+	<style>
+		.shareon * {
+			color: white !important;
+		}
+	</style>
 
-        button:not([disabled]):hover {
-            border: none;
-        }
-    </style>
-
-	<link rel="manifest" href="/site.webmanifest">
 	<link rel="icon" href="/favicon.ico">
 	<link rel="icon" href="/icon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <header>
-        <p>
-            <img src="https://raw.githubusercontent.com/NickKaramoff/shareon/main/assets/logo.svg"
-                 alt="shareon logo — the Postal Horn emoji"
-                 width="64"
-                 height="64">
-        </p>
-        <h1>shareon</h1>
-        <p>Lightweight, stylish and ethical share buttons</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://www.npmjs.com/package/shareon" target="_blank">npm</a>
-                </li>
-                <li>
-                    <a href="https://github.com/NickKaramoff/shareon" target="_blank">github</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+	<header>
+		<h1>shareon &#128239;</h1>
+		<p>Lightweight, stylish and ethical share buttons</p>
+		<nav>
+			<a href="https://www.npmjs.com/package/shareon" target="_blank">
+				npm
+			</a>
+			<a href="https://github.com/NickKaramoff/shareon" target="_blank">
+				GitHub
+			</a>
+		</nav>
+	</header>
 
-    <main>
-        <article>
-            <h2>
-                <a id="what-is-it" href="#what-is-it" aria-hidden="true"></a>
-                What is it?
-            </h2>
+	<main>
+		<section>
+			<p>
+				shareon are share buttons for popular social networks.
+			</p>
 
-            <p>
-                <code>shareon</code> are share buttons for popular social networks.
-            </p>
+			<div class="shareon"
+			     data-title="shareon — lightweight, stylish and ethical share buttons"
+				   style="text-align: center">
+				<a class="facebook">Share</a>
+				<a class="linkedin"></a>
+				<a class="mastodon" data-via="@NickKaramoff@fosstodon.org">Toot</a>
+				<a class="messenger" data-fb-app-id="3619024578167617"></a>
+				<a class="odnoklassniki"></a>
+				<a class="pinterest">Pin</a>
+				<br>
+				<a class="pocket"></a>
+				<a class="reddit"></a>
+				<a class="telegram"></a>
+				<a class="twitter" data-via="NickKaramoff"></a>
+				<a class="viber"></a>
+				<a class="vkontakte">Отправить</a>
+				<a class="whatsapp"></a>
+			</div>
 
-            <div class="shareon" data-title="shareon — lightweight, stylish and ethical share buttons"
-                 style="text-align: center">
-                <a class="facebook"></a>
-                <a class="linkedin"></a>
-                <a class="mastodon" data-via="@NickKaramoff@fosstodon.org"></a>
-                <a class="messenger" data-fb-app-id="3619024578167617"></a>
-                <a class="odnoklassniki"></a>
-                <a class="pinterest"></a>
-                <a class="pocket"></a>
-                <a class="reddit"></a>
-                <a class="telegram"></a>
-                <a class="twitter" data-via="NickKaramoff"></a>
-                <a class="viber"></a>
-                <a class="vkontakte"></a>
-                <a class="whatsapp"></a>
-            </div>
+			<p>
+				Unlike many other share buttons, shareon are:
+			</p>
 
-            <p>
-                Unlike many other share buttons, <code>shareon</code> are:
-            </p>
+			<ul>
+				<li><b>lightweight</b>, clocking in at around 7&nbsp;KB gzipped</li>
+				<li><b>stylish</b>, by having no visual features other than official colours and logos</li>
+				<li><b>ethical</b>, since they do not insert any pesky tracking code</li>
+			</ul>
 
-            <ul>
-                <li><b>lightweight</b>, clocking in at only 6 KB gzipped code (JS+CSS)</li>
-                <li><b>stylish</b>, by having no visual features other than official colors and logos</li>
-                <li><b>ethical</b>, since they do not insert any pesky tracking code</li>
-            </ul>
+			<p>
+				Upon initialization, shareon just populates the buttons with generated URLS. The speed and easy customization make shareon the perfect choice for your blog, news site, or project page!
+			</p>
+		</section>
 
-            <p>
-                The whole JavaScript code is quick and simple: it only populates the buttons with set up links. The
-                speed
-                and easy customization make <code>shareon</code> the perfect choice for your blog, news site or project
-                page!
-            </p>
-        </article>
+		<section>
+			<h2>Get started</h2>
+			<ol>
+				<li>
+					Include the links to shareon's JS and CSS in your website:
 
-        <article>
-            <h2>
-                <a id="install" href="#install" aria-hidden="true"></a>
-                Install
-            </h2>
-            <p>
-                Include the link to shareon's JS and CSS in your website:
-            </p>
-
-            <pre><code>&lt;link href="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.css"
+					<pre><code>&lt;link href="https://cdn.jsdelivr.net/npm/shareon@2/shareon.css"
       rel="stylesheet"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.js"
-        type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+&lt;script type="module"
+        src="https://cdn.jsdelivr.net/npm/shareon@2"&gt;&lt;/script&gt;</code></pre>
+				</li>
+				<li>
+					Create a container with class <code>shareon</code> and populate it with elements, whose classes match the names of the social networks:
 
-            <p>or install it via NPM and use it in a JS file that you will later bundle:</p>
-            <pre><code>const shareon = require('shareon');</code></pre>
-            <pre><code>import shareon from 'shareon';</code></pre>
-        </article>
-
-        <article>
-            <h2>
-                <a id="initialization" href="#initialization" aria-hidden="true"></a>
-                Initialization
-            </h2>
-            <p>
-                By default, shareon will initialize every button after page load.
-                It also exports the <code>shareon</code> function, that will let
-                you repopulate your buttons with updated information (for example,
-                if you changed the page title):
-            </p>
-
-            <pre><code>// shareon auto-initializes
-
-window.title = "Cool new window title";
-shareon();</code></pre>
-
-            <p>
-                If you want to postpone the initialization, you can import the
-                <code>noinit</code>-version of the package. You'll need to
-                manually call the <code>shareon</code> function when you want the
-                buttons to be initialized:
-            </p>
-            <pre><code>&lt;!-- notice the 'noinit' section of the url for JS --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/shareon@1/dist/noinit/shareon.min.js"
-        type="text/javascript"&gt;&lt;/script&gt;
-&lt;link href="https://cdn.jsdelivr.net/npm/shareon@1/dist/shareon.min.css"
-      rel="stylesheet"&gt;
-
-&lt;script type="text/javascript"&gt;
-  // do something important
-  shareon();
-&lt;/script&gt;</code></pre>
-
-            <p>
-                or, if you're using Node:
-            </p>
-
-            <pre><code>const shareon = require('shareon');
-// or
-import shareon from 'shareon';
-
-// do something important
-shareon();</code></pre>
-        </article>
-
-        <article>
-            <h2>
-                <a id="usage" href="#usage" aria-hidden="true"></a>
-                Usage
-            </h2>
-
-            <aside>
-                <p>
-                    <code>shareon</code> was heavily inspired by
-                    <a href="https://ilyabirman.net/projects/likely/">Likely</a>,
-                    and has a backwards-compatible API
-                </p>
-            </aside>
-
-            <p>
-                Create a container with class <code>shareon</code> and populate it with elements, whose classes match
-                the
-                names of social networks:
-            </p>
-
-            <pre><code>&lt;div class="shareon"&gt;
-    &lt;a class="facebook"&gt;&lt;/a&gt;
-    &lt;a class="linkedin"&gt;&lt;/a&gt;
-    &lt;a class="mastodon"&gt;&lt;/a&gt;
-    &lt;!-- FB App ID is required for the Messenger button to function --&gt;
-    &lt;a class="messenger" data-fb-app-id="0123456789012345"&gt;&lt;/a&gt;
-    &lt;a class="odnoklassniki"&gt;&lt;/a&gt;
-    &lt;a class="pinterest"&gt;&lt;/a&gt;
-    &lt;a class="pocket"&gt;&lt;/a&gt;
-    &lt;button class="reddit"&gt;&lt;/button&gt;
-    &lt;button class="telegram"&gt;&lt;/button&gt;
-    &lt;button class="twitter"&gt;&lt;/button&gt;
-    &lt;button class="viber"&gt;&lt;/button&gt;
-    &lt;button class="vkontakte"&gt;&lt;/button&gt;
-    &lt;button class="whatsapp"&gt;&lt;/button&gt;
+					<pre><code>&lt;div class="shareon"&gt;
+  &lt;a class="facebook"&gt;&lt;/a&gt;
+  &lt;a class="linkedin"&gt;&lt;/a&gt;
+  &lt;a class="mastodon"&gt;&lt;/a&gt;
+  &lt;!-- FB App ID is required for the Messenger button to function --&gt;
+  &lt;a class="messenger" data-fb-app-id="0123456789012345"&gt;&lt;/a&gt;
+  &lt;a class="odnoklassniki"&gt;&lt;/a&gt;
+  &lt;a class="pinterest"&gt;&lt;/a&gt;
+  &lt;a class="pocket"&gt;&lt;/a&gt;
+  &lt;a class="reddit"&gt;&lt;/a&gt;
+  &lt;a class="telegram"&gt;&lt;/a&gt;
+  &lt;a class="twitter"&gt;&lt;/a&gt;
+  &lt;a class="viber"&gt;&lt;/a&gt;
+  &lt;a class="vkontakte"&gt;&lt;/a&gt;
+  &lt;a class="whatsapp"&gt;&lt;/a&gt;
 &lt;/div&gt;</code></pre>
-            <div class="shareon">
-                <a class="facebook"></a>
-                <a class="linkedin"></a>
-                <a class="mastodon"></a>
-                <a class="messenger" data-fb-app-id="3619024578167617"></a>
-                <a class="odnoklassniki"></a>
-                <a class="pinterest"></a>
-                <a class="pocket"></a>
-                <button class="reddit"></button>
-                <button class="telegram"></button>
-                <button class="twitter"></button>
-                <button class="viber"></button>
-                <button class="vkontakte"></button>
-                <button class="whatsapp"></button>
-            </div>
+				</li>
+				<li>
+					Refine your buttons with extra parameters:
 
-            <p>
-                If you use <code>&lt;a&gt;</code>, the buttons will get a `href`-attribute to them. In other cases they
-                will get a listener on <code>click</code> event, so you can use <code>&lt;button&gt;</code>s if you
-                wish.
-            </p>
+					<ul>
+						<li>add <code>data-url</code> to any button to change the shared URL</li>
+						<li>add <code>data-title</code> to any button to change the shared title</li>
+						<li>you <strong>MUST</strong> add <code>data-fb-app-id</code> to the FB Messenger button to make sharing even possible</li>
+						<li>add <code>data-media</code> to an Odnoklassniki, Pinterest, or VK button to customize the pinned picture</li>
+						<li>add <code>data-text</code> to a WhatsApp, Mastodon, Telegram, or Viber button to add custom message text</li>
+						<li>add <code>data-via</code> to a Twitter or Mastodon button to mention a user</li>
+					</ul>
 
-            <p>
-                By default, the URL and the title of the page will be used in sharing dialogs. To change this, you can
-                use
-                the <code>data-url</code> and <code>data-title</code> attributes. Use them on the whole container or on
-                the specific buttons:
-            </p>
+					Use extra parameters on the whole container or on the specific buttons:
 
-            <pre><code>&lt;div class="shareon" data-url="https://example.com"&gt;
-    &lt;a class="whatsapp" data-title="Custom WhatsApp title"&gt;&lt;/a&gt;
-    &lt;a class="twitter" data-title="Custom Twitter title"&gt;&lt;/a&gt;
+					<pre><code>&lt;div class="shareon" data-url="https://example.com"&gt;
+  &lt;a class="whatsapp" data-title="Custom WhatsApp title"&gt;&lt;/a&gt;
+  &lt;a class="twitter" data-title="Custom Twitter title"&gt;&lt;/a&gt;
 &lt;/div&gt;</code></pre>
+				</li>
+				<li>
+					Go to the <a href="https://github.com/NickKaramoff/shareon#readme">GitHub repo</a> for more detailed documentation!
+				</li>
+			</ol>
+		</section>
+	</main>
 
-            <div class="shareon" data-url="https://example.com">
-                <a class="whatsapp" data-title="Custom WhatsApp title"></a>
-                <a class="twitter" data-title="Custom Twitter title"></a>
-            </div>
-
-            <p>
-                Apart from the URL and title, some networks support extra parameters:
-            </p>
-
-            <ul>
-                <li>you <strong>have to</strong> add <code>data-fb-app-id</code> to the FB Messenger button to make sharing even possible</li>
-                <li>add <code>data-media</code> to an Odnoklassniki, Pinterest, or VK button to customize the pinned picture</li>
-                <li>add <code>data-text</code> to a WhatsApp, Mastodon, Telegram, or Viber button to add custom message text</li>
-                <li>add <code>data-via</code> to a Twitter or Mastodon button to mention a user</li>
-            </ul>
-
-            <p>
-                Here are all the custom parameters in their glory:
-            </p>
-
-            <pre><code>&lt;div class="shareon" data-url="https://example.com/custom-url"&gt;
-    &lt;a class="facebook" data-title="Custom Facebook title"&gt;&lt;/a&gt;
-    &lt;a class="messenger" data-fb-app-id="0123456789012345"&gt;&lt;/a&gt;
-    &lt;a class="pinterest" data-media="https://picsum.photos/500"&gt;Pin&lt;/a&gt;
-    &lt;a class="telegram" data-text="Check this out!"&gt;&lt;/a&gt;
-    &lt;a class="twitter" data-via="MyNickname"&gt;&lt;/a&gt;
-    &lt;a class="mastodon" data-via="@MyNickname@myserver.social"&gt;&lt;/a&gt;
-    &lt;a class="whatsapp" data-url="https://my-cool-website.com"&gt;Send&lt;/a&gt;
-&lt;/div></code></pre>
-            <div class="shareon" data-url="https://example.com/custom-url">
-                <a class="facebook" data-title="Custom Facebook title"></a>
-                <a class="messenger" data-fb-app-id="3619024578167617"></a>
-                <a class="pinterest" data-media="https://picsum.photos/500">Pin</a>
-                <a class="telegram" data-text="Check this out!"></a>
-                <a class="twitter" data-via="MyNickname"></a>
-                <a class="mastodon" data-via="@MyNickname@myserver.social"></a>
-                <a class="whatsapp" data-url="https://my-cool-website.com">Send</a>
-            </div>
-
-        </article>
-    </main>
-
-    <footer>
-        <p>by <a href="https://karamoff.dev" target="_blank">Nikita Karamov</a></p>
-        <p>Website built with <a href="https://igoradamenko.github.io/awsm.css/index.html" target="_blank">awsm.css</a>
-        </p>
-    </footer>
-
-    <!-- These files are autocopied on build and will be present on the website -->
-    <!-- See https://github.com/NickKaramoff/shareon/blob/main/.github/workflows/node.yml#L29 -->
-    <link href="shareon.min.css" rel="stylesheet">
-    <script src="shareon.min.js" type="text/javascript"></script>
+	<footer>
+		<p>
+			shareon was created by <a href="https://karamoff.dev/" target="_blank">Nikita Karamov</a> and is licenced under BSD-3-Clause
+		</p>
+	</footer>
 </body>
 </html>
